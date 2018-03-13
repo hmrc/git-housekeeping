@@ -5,7 +5,7 @@ Set of scripts to help keep git repositories in good order.
 
 ## Remove no longer needed branches
 
-no longer needed = already merged to master or last commit older than specified date (1 month ago by default)
+no longer needed = already merged to master or last commit older than specified time reference (1 month ago by default)
 
 ```
 cd your-git-repository
