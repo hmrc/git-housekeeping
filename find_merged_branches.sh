@@ -2,24 +2,9 @@
 
 set -e
 
-localBranchExists() {
-  prefix=origin/
-  branch_name=${1#$prefix}
-  git show-ref --verify --quiet "refs/heads/$branch_name"
-}
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+"$SCRIPT_DIR/track_all_remote_branches.sh"
 
-git fetch --all -p --quiet
-
-# Tracking all remote branches
-git branch -r | grep -vE 'HEAD|master' | while read remote;
-  do
-    if ! localBranchExists $remote; then
-      git branch --track "${remote#origin/}" "$remote" --quiet
-    fi
-done
-
-git pull --all --quiet
-
-for b in $(git branch --merged master | tr '*' ' '); do
-  echo $b
+for b in $(git branch --merged master | tr '*' ' ' | grep -v master); do
+    echo $b
 done
