@@ -3,7 +3,7 @@
 
  [ ![Download](https://api.bintray.com/packages/hmrc/releases/git-housekeeping/images/download.svg) ](https://bintray.com/hmrc/releases/git-housekeeping/_latestVersion)
 
-This is a placeholder README.md for a new repository
+Set of scripts to help keep git repositories in good order.
 
 ### License
 
