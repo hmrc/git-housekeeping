@@ -12,7 +12,7 @@ usage() {
   echo
   echo " -l or --remove-local to remove local branches"
   echo
-  echo " -r or --remove-remote to remove local branches"
+  echo " -r or --remove-remote to remove remote branches"
   echo
   echo " -o or --older-than to specify how old branches can be, defaults to --older-than '1 month ago'"
   echo "  see here for supported date formats: https://stackoverflow.com/questions/19742345/what-is-the-format-for-date-parameter-of-git-commit/19742762#19742762"
