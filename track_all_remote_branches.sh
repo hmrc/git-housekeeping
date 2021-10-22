@@ -11,7 +11,7 @@ localBranchExists() {
 git fetch --all -p --quiet
 
 # Tracking all remote branches
-git branch -r | grep -vE 'HEAD|master' | while read remote;
+git branch -r | grep -vE 'HEAD|main' | while read remote;
   do
     if ! localBranchExists $remote; then
       git branch --track "${remote#origin/}" "$remote" --quiet

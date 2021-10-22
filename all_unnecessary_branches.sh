@@ -4,7 +4,7 @@ set -e
 
 usage() {
   echo
-  echo "Returns no longer needed branches (merged to master or old enough)"
+  echo "Returns no longer needed branches (merged to main or old enough)"
   echo
   echo "Following options are supported: "
   echo
@@ -39,4 +39,4 @@ UNNECESSARY_BRANCHES=$(mktemp)
 "$SCRIPT_DIR"/find_old_branches.sh --older-than \'"$OLDER_THAN"\' >> "$UNNECESSARY_BRANCHES"
 "$SCRIPT_DIR"/find_merged_branches.sh >> "$UNNECESSARY_BRANCHES"
 
-sort -u "$UNNECESSARY_BRANCHES" | grep -v master
+sort -u "$UNNECESSARY_BRANCHES" | grep -v main

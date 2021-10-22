@@ -74,7 +74,7 @@ remove_remote_branch() {
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 "$SCRIPT_DIR"/all_unnecessary_branches.sh | while read branch; do
-  if [[ "$branch" =~ master ]]; then
+  if [[ "$branch" =~ main ]]; then
     echo "skipping branch: $branch"
   else
     remove_local_branch "$branch"

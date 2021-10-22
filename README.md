@@ -5,7 +5,7 @@ Set of scripts to help keep git repositories in good order.
 
 ## Remove no longer needed branches
 
-no longer needed = already merged to master or last commit older than specified time reference (1 month ago by default)
+no longer needed = already merged to main or last commit older than specified time reference (1 month ago by default)
 
 ```
 cd your-git-repository
@@ -31,7 +31,7 @@ cd your-git-repository
 grep -F -v -f <($SCRIPTS_DIR/all_unnecessary_branches.sh) <(git branch -r)
 ```
 
-## Show branches merged to master
+## Show branches merged to main
 
 ```
 cd your-git-repository
